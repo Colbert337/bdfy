@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle name="m_his_mz_xxcx" level="4" description="信息查询">
+	<functions>
+		<function functionid="M07.02.06.01" functionname="交易明细查询" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.xxcx.action.jymx.QueryTradeDetailAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID" />
+			<check-param name="qsrq00" message = "起始日期" />
+			<check-param name="jzrq00" message = "截止日期" />
+		</function>
+		<function functionid="M07.02.06.02" functionname="门诊收费记录查询" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.xxcx.action.mzsfcx.QueryClinicalRecordAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID" />
+		</function>
+		<function functionid="M07.02.06.03" functionname="门诊收费明细查询" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.xxcx.action.mzsfcx.QueryClinicalDetailAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID" />
+			<check-param name="sflsh0" message = "收据号" />
+		</function>
+		<function functionid="M07.02.06.04" functionname="物价查询" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.xxcx.action.wjgs.priceQueryAction" remark="" >
+			<check-param name="yyjgdm" message="医院机构代码"/>
+			<check-param name="cxlb00" message="查询类别"/>
+			<check-param name="pyszm0" message="拼音首字母"/>
+		</function>
+	</functions>
+		
+	<procedures>
+		<procedure localname="SP_SST_QUERY_MZJSCX" remotename="SP_SST_QUERY_MZJSCX_YKT" description="门诊收费记录查询" resulttype="normal" cursorindex="9" messageindex="8">
+            <param name="zdbh00"    description="终端编号"      type="in" paramtype="12"/>
+            <param name="fzxbh0"    description="分中心编号"    type="in" paramtype="12"/>
+            <param name="cxfs00"    description="查询方式"      type="in" paramtype="12"/>
+            <param name="cxdm00"    description="查询代码"      type="in" paramtype="12"/>
+            <param name="qsrq00"    description="起始日期"      type="in" paramtype="12"/>
+            <param name="jzrq00"    description="截止日期"      type="in" paramtype="12"/>
+            <param name="byrc00"    description="备用入参"      type="in" paramtype="12"/>
+            <param name="errmsg"    description="出错信息"      type="out" paramtype="12"/>
+        </procedure>
+        <procedure localname="SP_SST_QUERY_MZJSMXCX" remotename="SP_SST_QUERY_MZJSMXCX_YKT" description="门诊收费明细查询" resulttype="normal" cursorindex="5" messageindex="4">
+            <param name="zdbh00"    description="终端编号"      type="in"/>
+            <param name="cxdm00"    description="查询代码"      type="in"/>
+            <param name="jssjh0"    description="结算收据号"    type="in"/>
+            <param name="errmsg"    description="出错信息"      type="out" paramtype="12"/>
+        </procedure>
+    	<procedure localname="SP_SST_YPYJFY_QUERY" remotename="SP_SST_YPYJFY_QUERY_YKT" description="物价查询" resulttype="normal" cursorindex="" messageindex="8">
+			<param name="zdbh00" description="终端编号" type="in"/>
+			<param name="yyjgdm" description="医院机构代码" type="in"/>
+			<param name="cxlb00" description="查询类别" type="in"/>
+			<param name="pyszm0" description="拼音首字母" type="in"/>
+			<param name="qsym00" description="起始页码" type="in"/>
+			<param name="myjls0" description="每页记录数" type="in"/>
+			<param name="zgjls0" description="总共记录数" type="out" paramtype="12"/>
+			<param name="errmsg" description="错误信息" type="out" paramtype="12"/>
+		</procedure>
+    </procedures>
+</sst-bundle>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle name="m_his_mz_ybjk" level="4" description="医保接口">
+	<functions>
+		<function functionid="M07.02.19.01" functionname="获取医保配置信息" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ybjk.action.GetConfigAction" remark="" >
+		</function>
+		<function functionid="M07.02.19.02" functionname="获取医保结算数据" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ybjk.action.GetSettleInfoAction" remark="" >
+			<!--<check-param name="yyjgdm" message = "医院机构代码" />-->
+			<!--<check-param name="cxfs00" message = "查询方式" />-->
+			<!--<check-param name="cxdm00" message = "查询代码" />-->
+			<!--<check-param name="brid00" message = "患者ID" />-->
+			<check-param name="ywlx00" message = "业务类型" />
+		</function>
+		<function functionid="M07.02.19.03" functionname="更新KC22表作废标志" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ybjk.action.UpdateKC22ckc125Action" remark="" >
+			<check-param name="billno" message = "医保单据号" />
+		</function>
+	</functions>
+</sst-bundle>

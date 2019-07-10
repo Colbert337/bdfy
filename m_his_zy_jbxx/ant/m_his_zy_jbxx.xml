@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle name="m_his_zy_jbxx" level="4" description="住院病人基本信息">
+    <functions>
+    	<function functionid="M07.01.01.01" functionname="获取医院机构代码" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.jbxx.action.GetHospitalOrgCodeAction" remark="">
+    	</function>
+    	   	
+		<function functionid="M07.01.01.02" functionname="获取终端配置信息" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.jbxx.action.GetZdpzAction" remark="">
+		</function>
+				
+		<function functionid="M07.01.01.03" functionname="获取个人基本信息" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.jbxx.action.GetPatientInfoAction" remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+		</function>
+		
+		<function functionid="M07.01.01.04" functionname="获取卡号" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.jbxx.action.GetCardNoAction" remark="">
+			<check-param name="cxdm00" message = "查询代码" />
+		</function>
+		
+		<function functionid="M07.01.01.08" functionname="获取终端私有属性" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.jbxx.action.GetPrivateAttributesAction" remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+		</function>
+					
+	</functions>
+	
+	<procedures>
+        <procedure localname="SP_SST_ZY_GETBRJBXX" remotename="SP_SST_ZY_GETBRJBXX_YKT" description="获取个人基本信息" resulttype="normal" cursorindex="" messageindex="25">
+            <param name="zdbh00"    description="终端编号" 		type="in"/>
+            <param name="yyjgdm"    description="医院机构代码"   type="in"/>
+            <param name="cxfs00"  description="查询方式"         type="in"/>
+            <param name="cxdm00"    description="查询代码"           type="in"/>
+            <param name="patientid"    description="病人ID号"           type="out" paramtype="12"/>
+            <param name="zyhao0"    description="住院号"           type="out" paramtype="12"/>
+            <param name="xming0"    description="姓名"           type="out" paramtype="12"/>
+            <param name="xbie00"    description="性别" 			 type="out" paramtype="12"/>
+            <param name="brfb00"    description="病人费别" 		type="out" paramtype="12"/>
+            <param name="sfzhao"    description="身份证号" 			 type="out" paramtype="12"/>
+            <param name="csrq00"    description="出生日期" 		type="out" paramtype="12"/>
+            <param name="lxdh00"    description="联系电话" 		type="out" paramtype="12"/>
+            <param name="lxdz00"    description="联系地址" 		type="out" paramtype="12"/>
+            <param name="cwdm00"    description="床位代码" 		type="out" paramtype="12"/>
+            <param name="szcwh0"    description="所在床位号" 		type="out" paramtype="12"/>
+            <param name="zyfyze"    description="住院费用总额" 		type="out" paramtype="12"/>
+            <param name="ryrq00"    description="入院日期" 		type="out" paramtype="12"/>
+            <param name="ksmc00"    description="科室名称" 		type="out" paramtype="12"/>
+            <param name="bqmc00"    description="病区名称" 		type="out" paramtype="12"/>
+            <param name="yjjze0"    description="预交金总额（院内缴费总额）"    type="out" paramtype="12"/>
+            <param name="yjjye0"    description="预交金余额(病人实际余额)"    type="out" paramtype="12"/>
+            <param name="yjjkye"    description="预交金可用余额（包含允许欠费金额）"    type="out" paramtype="12"/>
+            <param name="yxqfje"    description="允许欠费金额"    type="out" paramtype="12"/>
+            <param name="dkze00"    description="待扣费总额" 		type="out" paramtype="12"/>
+            <param name="errmsg"    description="出错信息"       type="out" paramtype="12" />	
+        </procedure>
+    </procedures>
+</sst-bundle>

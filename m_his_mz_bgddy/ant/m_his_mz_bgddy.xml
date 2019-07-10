@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle level="4" description="报告单打印" name="m_his_mz_bgddy">
+	<functions>
+	    <function functionid="M07.02.14.01" functionname="查询所有未打印报告单" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.bgddy.action.GetUserQueryListAction" remark="" >
+			<check-param name="yyjgdm" message = "机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID" />
+		</function>
+		<function functionid="M07.02.14.02" functionname="获取报告单pdf" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.bgddy.action.GetReportPdfAction" remark="" >
+			<check-param name="yyjgdm" message = "机构代码" />
+			<check-param name="bgwjmc" message = "报告文件名称" />
+		</function>
+		<function functionid="M07.02.14.03" functionname="更新报告单状态为已打印" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.bgddy.action.UpdateFlagAfterPrintAction" remark="" >
+			<check-param name="yyjgdm" message = "机构代码" />
+			<check-param name="yqdm00" message = "仪器编码" />
+			<check-param name="ybh000" message = "样本号" />
+			<check-param name="bgrq00" message = "报告日期" />
+		</function>
+		<function functionid="M07.02.14.04" functionname="打印报告" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.bgddy.action.PrintReportAction" remark="" >
+			<check-param name="yyjgdm" message = "机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID" />
+		</function>
+	</functions>
+	<constants>
+	    <constant name="pdfurl" value="D:\pdf\"  desc="pdf存放路径"/>
+	</constants>
+</sst-bundle>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle name="m_his_mz_mzyy" level="4" description="预约挂号">
+	<functions>	
+		<function functionid="M07.02.04.01" functionname="获取预约科室" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryBookDepartmentAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="yyrq00" message = "预约日期" />
+		</function>										
+		<function functionid="M07.02.04.02" functionname="获取预约医生信息" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryBookDoctorAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="yyrq00" message = "预约日期" />
+			<check-param name="ksbh00" message = "预约科室编号" />
+			<check-param name="brid00" message = "病人ID号" />
+		</function>						
+		<function functionid="M07.02.04.03" functionname="获取预约日期" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryBookDateAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+		</function>		
+		<function functionid="M07.02.04.04" functionname="获取预约时间" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryBookTimeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="pbid00" message = "排班ID"/>
+		</function>				
+		<function functionid="M07.02.04.05" functionname="门诊预约登记" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.BookAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "卡号" />
+			<check-param name="brid00" message = "病人ID号" />
+			<check-param name="xming0" message = "姓名" />
+			<check-param name="csrq00" message = "出生日期" />
+			<check-param name="xbie00" message = "性别" />
+			<check-param name="lxdh00" message = "联系电话" />
+			<check-param name="brfb00" message = "病人费别" />
+			<check-param name="ksbh00" message = "科室编号" />
+			<check-param name="ysbh00" message = "医生编号" />
+			<check-param name="ghjb00" message = "挂号级别" />
+			<check-param name="pbid00" message = "排班ID"/>
+			<check-param name="mzsj00" message = "午别"/>
+			<check-param name="ghf000" message = "挂号费" />
+		</function>										
+		<function functionid="M07.02.04.06" functionname="获取预约信息" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryBookRecordAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID号" />
+		</function>
+		<function functionid="M07.02.04.07" functionname="取消预约" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.CancelBookAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID号" />
+			<check-param name="yylsh0" message = "预约流水号" />
+			<check-param name="yyxh00" message = "预约序号" />
+		</function>
+		<function functionid="M07.02.04.08" functionname="预约确认" 	functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.BookRegConfirmAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "卡号" />
+			<check-param name="brid00" message = "病人ID号" />
+			<check-param name="yylsh0" message = "预约流水号" />
+			<check-param name="yyrq00" message = "预约日期" />
+			<check-param name="ksbh00" message = "科室编号" />
+			<check-param name="ysbh00" message = "医生编号" />
+			<check-param name="ghjb00" message = "挂号级别" />
+			<check-param name="pbid00" message = "排班ID"/>
+			<check-param name="ghf000" message = "挂号费" />
+		</function>
+		<function functionid="M07.02.04.09" functionname="门诊挂号登记" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.XcphAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "卡号" />
+			<check-param name="brid00" message = "病人ID号" />
+			<check-param name="xming0" message = "姓名" />
+			<check-param name="csrq00" message = "出生日期" />
+			<check-param name="xbie00" message = "性别" />
+			<check-param name="lxdh00" message = "联系电话" />
+			<check-param name="brfb00" message = "病人费别" />
+			<check-param name="ksbh00" message = "科室编号" />
+			<check-param name="ysbh00" message = "医生编号" />
+			<check-param name="ghjb00" message = "挂号级别" />
+			<check-param name="pbid00" message = "排班ID"/>
+			<check-param name="mzsj00" message = "午别"/>
+			<check-param name="ghf000" message = "挂号费" />
+		</function>
+		<function functionid="M07.02.04.10" functionname="获取挂号科室" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryXcphDepartmentAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+		</function>
+		<function functionid="M07.02.04.13" functionname="获取挂号医生信息" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryXcphDoctorAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="ksbh00" message = "预约科室编号" />
+			<check-param name="brid00" message = "病人ID号" />
+		</function>
+		<function functionid="M07.02.04.14" functionname="获取挂号时间" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryXcphTimeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="pbid00" message = "排班ID"/>
+		</function>
+		<function functionid="M07.02.04.15" functionname="获取科别列表" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryYykbListAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+		</function>
+		<function functionid="M07.02.04.16" functionname="查询挂号费" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.QueryGhfAction" remark="" >
+			<check-param name="brid00" message = "病人ID号" />
+			<check-param name="xming0" message = "姓名" />
+			<check-param name="csrq00" message = "出生日期" />
+			<check-param name="xbie00" message = "性别" />
+			<check-param name="lxdh00" message = "联系电话" />
+			<check-param name="brfb00" message = "病人费别" />
+			<check-param name="ghjb00" message = "挂号级别" />
+		</function>
+		<function functionid="M07.02.04.17" functionname="获取门诊号" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.GetClinicCodeAction" remark="" >
+			<check-param name="brid00" message = "病人ID号" />
+			<check-param name="xming0" message = "姓名" />
+			<check-param name="csrq00" message = "出生日期" />
+			<check-param name="xbie00" message = "性别" />
+			<check-param name="lxdh00" message = "联系电话" />
+			<check-param name="brfb00" message = "病人费别" />
+			<check-param name="ksbh00" message = "科室编号" />
+			<check-param name="ysbh00" message = "医生编号" />
+			<check-param name="ghjb00" message = "挂号级别" />
+			<check-param name="pbid00" message = "排班ID"/>
+			<check-param name="mzsj00" message = "午别"/>
+			<check-param name="ghf000" message = "挂号费" />
+		</function>
+		<function functionid="M07.02.04.18" functionname="锁号" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.mzyy.action.DoLockSignalAction" remark="" >
+			<check-param name="ksbh00" message = "科室编号" />
+			<check-param name="ysbh00" message = "医生编号" />
+			<check-param name="mzsj00" message = "午别"/>
+			<check-param name="yysj00" message = "时间点"/>
+		</function>
+	</functions>
+							
+	<procedures>
+		<procedure localname="SP_SST_MZYY_MZGHKS" remotename="SP_SST_MZYY_MZGHKS" description="现场排号获取科室列表" resulttype="cursor" cursorindex="5" messageindex="4">
+			<param name="yyrq00" description="预约就诊日期" type="in"/>
+			<param name="yylb00" description="预约类别" type="in"/>
+			<param name="pdlx00" description="排队类型" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_ZJYYCX" remotename="SP_SST_MZYY_ZJYYCX" description="现场排号获取科室列表" resulttype="cursor" cursorindex="6" messageindex="5">
+			<param name="ksbm00" description="预约科室编号" type="in"/>
+			<param name="yyrq00" description="预约就诊日期" type="in"/>
+			<param name="yylb00" description="预约类别" type="in"/>
+			<param name="pdlx00" description="排队类型" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_XCPDQH" remotename="SP_SST_MZYY_XCPDQH" description="现场排号登记" resulttype="cursor" cursorindex="7" messageindex="6">
+			<param name="zdbh00" description="终端编号" type="in"/>
+			<param name="pblsh0" description="排班流水号" type="in"/>
+			<param name="yyysgh" description="医生编号" type="in"/>
+			<param name="yyysxm" description="科室编号" type="in"/>
+			<param name="cxdm00" description="卡号" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>	
+		</procedure>
+		
+		<procedure localname="SP_SST_QUERY_YYKS" remotename="SP_SST_QUERY_YYKS" description="门诊预约获取科室列表" resulttype="cursor" cursorindex="3" messageindex="2">
+			<param name="yylb00" description="预约类别" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_HQKSZJ" remotename="SP_SST_MZYY_HQKSZJ" description="门诊预约获取科室专家信息" resulttype="cursor" cursorindex="4" messageindex="3">
+			<param name="yyks00" description="科室编码" type="in"/>
+			<param name="yylb00" description="预约类别" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_HQZJPB" remotename="SP_SST_MZYY_HQZJPB" description="门诊预约获取专家排班信息" resulttype="cursor" cursorindex="5" messageindex="4">
+			<param name="yyks00" description="科室编码" type="in"/>
+			<param name="yyysgh" description="预约医生工号" type="in"/>
+			<param name="yylb00" description="预约类别" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_ZJHYCX" remotename="SP_SST_MZYY_ZJHYCX" description="获取时间列表" resulttype="cursor" cursorindex="3" messageindex="2">
+			<param name="pblsh0" description="排班流水号" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_ZJYYDJ" remotename="SP_SST_MZYY_ZJYYDJ" description="预约登记" resulttype="normal" cursorindex="" messageindex="11">
+			<param name="zdbh00" description="终端编号" type="in"/>
+			<param name="pblsh0" description="排班流水号" type="in"/>
+			<param name="hylsh0" description="号源流水号" type="in"/>
+			<param name="yyysgh" description="医生工号" type="in"/>
+			<param name="yyysxm" description="医生姓名" type="in"/>
+			<param name="yyrq00" description="预约就诊日期" type="in"/>
+			<param name="yylb00" description="预约类别" type="in"/>
+			<param name="hzhs00" description="候诊号数" type="in"/>
+			<param name="hzsj00" description="预约时间" type="in"/>
+			<param name="cxdm00" description="卡号" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_CXYYLB" remotename="SP_SST_MZYY_CXYYLB" description="获取预约记录" resulttype="cursor" cursorindex="3" messageindex="2">
+			<param name="cxdm00" description="卡号" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_QXYY" remotename="SP_SST_MZYY_QXYY" description="获取时间列表" resulttype="normal" cursorindex="" messageindex="3">
+			<param name="cxdm00" description="卡号" type="in"/>
+			<param name="id0000" description="号源流水号" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+		</procedure>
+		<procedure localname="SP_SST_MZYY_YYQR" remotename="SP_SST_MZYY_YYQR" description="预约确认" resulttype="normal" cursorindex="" messageindex="4">
+			<param name="zdbh00" description="终端编号" type="in"/>
+			<param name="id0000" description="预约惟一标识符" type="in"/>
+			<param name="cxdm00" description="卡号" type="in"/>
+			<param name="returnmsg" description="错误信息" type="out" paramtype='12'/>
+			<param name="retrieve" description="装载结果集的游标" type="out" paramtype='-10'/>	
+		</procedure>
+	</procedures>
+</sst-bundle>

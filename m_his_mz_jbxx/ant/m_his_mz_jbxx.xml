@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle name="m_his_mz_jbxx" level="4" description="门诊基本信息">
+	<functions>
+		<function functionid="M07.02.01.01" functionname="获取医院机构代码" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.jbxx.action.GetHospitalOrgCodeAction"  remark="">
+		</function>
+		<function functionid="M07.02.01.02" functionname="获取病人基本信息" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.jbxx.action.GetPatientInfoAction"  remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+		</function>
+		<function functionid="M02.02.01.03" functionname="获取医保病人参保信息" functiontype="M02" actionpath="com.ylzinfo.model.his.mz.jbxx.action.GetHealthInsurancePatientInfoAction"  remark="">
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="dqbh00" message = "地区编号" />
+		</function>
+		<function functionid="M07.02.01.04" functionname="卡号解密" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.jbxx.action.DecryptCardNoAction"  remark="">
+			<check-param name="cxdm00"  message = "查询代码" />
+		</function>
+		<function functionid="M07.02.01.08" functionname="获取终端私有属性" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.jbxx.action.GetPrivateAttributesAction"  remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+		</function>
+	</functions>
+			
+    <constants>
+    	<!-- add by crd 20170217 reason  sfzhfzxbh  zhgz00 这两个字段是为了兼容旧框架没有FZXBH00这个字段出参的，要配置着使用    默认是不存在这两个参数配置的不加也不会报错，不要纠结就可以了   -->
+		<constant name="sfzhfzxbh" value="Y" desc="是否转换换分中心编号 Y：是 N否" />
+		<constant name="zhgz00" value="xm174" desc="转换规则  xm174 " />
+	</constants>
+</sst-bundle>

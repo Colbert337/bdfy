@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config name="m_his_mz_ynkfk" level="4" description="院内卡发卡">
+    <functions>
+    	<function functionid="M07.02.02.01" functionname="建档身份判断" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ynkfk.action.GetArchiveTelAction" remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+		</function>																			
+		<function functionid="M07.02.02.03" functionname="建档初始化" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ynkfk.action.InitArchiveAction" remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="xming0" message = "姓名" />
+			<check-param name="xbie00" message = "性别" />
+			<check-param name="xbiemc" message = "性别名称" />
+			<check-param name="sfzhao" message = "身份证号码" />
+			<check-param name="csrq00" message = "出生日期" />
+		</function>								
+		<function functionid="M07.02.02.04" functionname="建档确认" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ynkfk.action.DoArchiveCreditAction" remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="jdlsh0" message = "建档流水号" />
+		</function>							
+		<function functionid="M07.02.02.05" functionname="发卡建档取消" functiontype="M07" actionpath="com.ylzinfo.model.his.mz.ynkfk.action.DoArchiveCancelAction"  remark="">
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="jdlsh0" message = "建档流水号" />
+			<check-param name="tkzt00" message = "吐卡状态" />
+		</function>					
+	</functions>
+	
+	<procedures>		
+        <procedure localname="sp_sst_zzfk_hqkhdh" remotename="sp_sst_zzfk_hqkhdh_ykt" description="根据身份证获取卡号" resulttype="normal" cursorindex="" messageindex="6">
+            <param name="yyjgdm"    description="医院机构代码"           type="in" paramtype="12"/>
+            <param name="sfhqkh"    description="是否获取卡号"           type="in" paramtype="12"/>
+            <param name="sfzhao"    description="身份证号"               type="in" paramtype="12"/>
+            <param name="lxdh00"    description="联系电话"               type="out" paramtype="12"/>
+            <param name="cardno"    description="卡号"                   type="out" paramtype="12"/>
+            <param name="errmsg"    description="出错信息"               type="out" paramtype="12"/>
+        </procedure>
+        <procedure localname="SP_SST_ZZFK_KHSFCZ" remotename="SP_SST_ZZFK_KHSFCZ_YKT" description="根据身份证获取卡号" resulttype="normal" cursorindex="" messageindex="4">
+            <param name="yyjgdm"    description="医院机构代码"           type="in"/>
+            <param name="cxdm00"    description="查询代码"               type="in"/>
+            <param name="bycc00"    description="备用出参"               type="out" paramtype="12"/>
+            <param name="errmsg"    description="出错信息"               type="out" paramtype="12"/>
+        </procedure>            
+        <procedure localname="SP_SST_ZZFK_DAXXDJ" remotename="SP_SST_ZZFK_DAXXDJ_YKT" description="确认建档" resulttype="normal" cursorindex="" messageindex="23">
+            <param name="zdbh00"    description="终端编号"             	type="in"/>
+            <param name="fzxbh0"    description="医院机构代码"        	type="in"/>
+            <param name="cxdm00"    description="病人卡号"             	type="in"/>
+            <param name="sfzhao"    description="保险编号"             	type="in"/>
+            <param name="sfzhao"    description="身份证号"             	type="in"/>           
+            <param name="xming0"    description="姓名"               	type="in"/>
+            <param name="xbie00"    description="性别"               	type="in"/>
+            <param name="brnl00"    description="年龄"               	type="in"/>
+            <param name="rylb00"    description="人员类别"             	type="in"/>
+            <param name="csrq00"    description="出生日期"           	type="in"/>           
+            <param name="fzxmc0"    description="分中心名称"           	type="in"/>
+            <param name="fzxmc0"    description="11工作单位名称"         type="in"/>
+            <param name="grzhye"    description="帐户余额"           	type="in"/>
+            <param name="lxdh00"    description="联系电话"           	type="in"/>
+            <param name="czlb00"    description="操作类别"           	type="in"/>            
+            <param name="lxdz00"    description="联系地址"           	type="in"/>
+            <param name="czje00"    description="充值金额"           	type="in"/>
+            <param name="byrc00"    description="备用入参"         		type="in"/>
+            <param name="cgjysj"    description="成功交易时间"          	type="out" paramtype="12"/>
+            <param name="pjh000"    description="充值票据号(系统跟踪号)" 	type="out" paramtype="12"/>           
+            <param name="xtgzh0"    description="充值票据号(系统跟踪号)" type="out" paramtype="12"/>
+            <param name="errmsg"    description="出错信息"              	type="out" paramtype="12"/>
+            <param name="bycc00"    description="备用出参"             	type="out" paramtype="12"/>
+       </procedure>           
+    </procedures>
+</config>

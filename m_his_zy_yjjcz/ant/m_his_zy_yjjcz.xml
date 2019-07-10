@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sst-bundle name="m_his_zy_yjjcz" level="4" description="住院预交金充值">
+	<functions>
+		<function functionid="M07.01.03.01" functionname="判断充值时间" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.CheckChargeTimeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="optype" message = "操作类别" />
+			<check-param name="czlb00" message = "充值类别" />
+		</function>
+		<function functionid="M07.01.03.02" functionname="本次收钱统计V2分日期统计" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.CollectMoneyCaculateV2Action" remark="" >
+			<check-param name="sfcdbz" message = "是否重打标志" />
+		</function>
+		<function functionid="M07.01.03.03" functionname="本次收钱统计" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.CollectMoneyCaculateAction" remark="" >
+			<check-param name="sfcdbz" message = "是否重打标志" />
+		</function>
+		<function functionid="M07.01.03.04" functionname="预缴金充值初始化" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.InitChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="zzs000" message = "总张数" />
+			<check-param name="dzjec0" message = "单张金额串" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.05" functionname="单笔累加到合计" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.AccumulateChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="dblsh0" message = "单笔流水号" />
+		</function>
+		<function functionid="M07.01.03.06" functionname="单笔失败，钱币吐出" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.FailChargeAction" remark="" >
+		    <check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="dblsh0" message = "单笔流水号" />
+		</function>
+		<function functionid="M07.01.03.07" functionname="预缴金充值完成" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.FinishChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.38" functionname="预缴金充值初始化(前台累计)" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.InitChargeQdljAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.39" functionname="预缴金充值完成(前台累计)" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.FinishChargeQdljAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="dblsh0" message = "单笔流水号" />
+			<check-param name="zzs000" message = "总张数" />
+			<check-param name="dzjec0" message = "单张金额串" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.40" functionname="上传异常记录(前台累计)" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.CashReUploadAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="dblsh0" message = "单笔流水号" />
+			<check-param name="dzjec0" message = "单张金额串" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.08" functionname="银行卡充值初始化" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.BankInitChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.09" functionname="银行卡充值确认" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.BankFinishChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="brid00" message = "病人ID" />
+			<check-param name="times0" message = "住院次数" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="czje00" message = "充值金额" />
+			<check-param name="yhkhao" message = "银行卡号" />
+			<check-param name="jyje00" message = "交易金额" />
+			<check-param name="poslsh" message = "POS终端流水号" />
+			<check-param name="pospch" message = "POS批次号" />
+			<check-param name="posrq0" message = "POS交易日期" />
+			<check-param name="possj0" message = "POS交易时间" />
+			<check-param name="zxlsh0" message = "POS中心流水号" />
+			<check-param name="shhao0" message = "POS商户号" />
+			<check-param name="poszdh" message = "POS终端号" />
+			<check-param name="mess00" message = "提示信息" />
+		</function>
+		<function functionid="M07.01.03.10" functionname="银行卡充值失败" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.BankFailChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="mess00" message = "提示信息" />
+		</function>
+		<function functionid="M07.01.03.18" functionname="银行卡充值重上传" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.BankReUploadAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="yhkhao" message = "银行卡号" />
+			<check-param name="jyje00" message = "交易金额" />
+			<check-param name="poslsh" message = "POS终端流水号" />
+			<check-param name="pospch" message = "POS批次号" />
+			<check-param name="posrq0" message = "POS交易日期" />
+			<check-param name="possj0" message = "POS交易时间" />
+			<check-param name="zxlsh0" message = "POS中心流水号" />
+			<check-param name="possqh" message = "POS授权号" />
+			<check-param name="shhao0" message = "POS商户号" />
+			<check-param name="poszdh" message = "POS终端号" />
+			<check-param name="mess00" message = "提示信息" />
+		</function>
+		<function functionid="M07.01.03.11" functionname="单笔充值手工冲正" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.DbczSgczAction" remark="" >
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="dblsh0" message = "单笔流水号" />
+		</function>
+		<function functionid="M07.01.03.12" functionname="合计充值手工冲正" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZhczSgczAction" remark="" >
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.13" functionname="银行卡充值手工冲正" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.BankSgczAction" remark="" >
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.17" functionname="银行卡充值金额累计" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.BankChargeLimitAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+		</function>
+		<function functionid="M07.01.03.19" functionname="支付宝充值初始化" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZfbpayPreOrderAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.20" functionname="支付宝充值订单查询" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZfbpayQueryOrderAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="czje00" message = "充值金额" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.21" functionname="支付宝充值订单撤销" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZfbpayCancelOrderAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.22" functionname="支付宝充值退款" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZfbpayRefundAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="tkje00" message = "退款金额" />
+		</function>
+		<function functionid="M07.01.03.23" functionname="支付宝充值确认" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZfbpayFinishChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<!--<check-param name="brid00" message = "病人ID" />-->
+			<!--<check-param name="times0" message = "住院次数" />-->
+			<check-param name="czje00" message = "充值金额" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.25" functionname="微信充值初始化" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.WxpayPreOrderAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="czje00" message = "充值金额" />
+		</function>
+		<function functionid="M07.01.03.26" functionname="微信充值订单查询" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.WxpayQueryOrderAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="czje00" message = "充值金额" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.27" functionname="微信充值订单撤销" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.WxpayCancelOrderAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.28" functionname="微信充值退款" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.WxpayRefundAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="tkje00" message = "退款金额" />
+		</function>
+		<function functionid="M07.01.03.29" functionname="微信充值确认" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.WxpayFinishChargeAction" remark="" >
+			<check-param name="yyjgdm" message = "医院机构代码" />
+			<check-param name="cxfs00" message = "查询方式" />
+			<check-param name="cxdm00" message = "查询代码" />
+			<!--<check-param name="brid00" message = "病人ID" />-->
+			<!--<check-param name="times0" message = "住院次数" />-->
+			<check-param name="czje00" message = "充值金额" />
+			<check-param name="jylsh0" message = "交易流水号" />
+		</function>
+		<function functionid="M07.01.03.36" functionname="支付宝充值手工冲正" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.ZfbpaySgczAction" remark="" >
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="cxdm00" message = "查询代码" />
+		</function>
+		<function functionid="M07.01.03.37" functionname="微信充值手工冲正" functiontype="M07" actionpath="com.ylzinfo.model.his.zy.yjjcz.action.WxpaySgczAction" remark="" >
+			<check-param name="jylsh0" message = "交易流水号" />
+			<check-param name="cxdm00" message = "查询代码" />
+		</function>
+	</functions>
+	
+	<procedures>
+		<procedure localname="SP_SST_ZY_YJJ_ZHCZ" remotename="SP_SST_ZY_YJJ_ZHCZ_YKT" description="YJJCZ" resulttype="normal" cursorindex="" messageindex="11">
+            <param name="yyjgdm"    description="医院机构代码" 		type="in"/>
+            <param name="cxdm00"    description="卡号" 		type="in"/>
+            <param name="cxfs00"    description="卡类型" 		type="in"/>
+            <param name="zyhao0"    description="住院号" 		type="in"/>
+            <param name="czje00"    description="充值金额" 		type="in"/>
+            <param name="jylsh0"    description="交易流水号" 		type="in"/>
+            <param name="jylx00"    description="交易类型" 		type="in"/>
+            <param name="poslsh"    description="银行流水号" 		type="in"/>
+            <param name="zdbh00"    description="终端编号" 		type="in"/>
+            <param name="flag"    description="错误标志" 		type="out" paramtype="12"/>
+            <param name="errmsg"    description="返回错误信息" 		type="out" paramtype="12"/>
+        </procedure>
+		<procedure localname="SP_SST_ZYYJJ_COUNTMONEY" remotename="SP_SST_ZYYJJ_COUNTMONEY"
+			description="统计终端收钱总额" resulttype="cursor" cursorindex="4" messageindex="3">
+			<param name="zdbh00" description="终端编号" type="in" />
+			<param name="sfcdbz" description="是否重打标志" type="in" />
+			<param name="errmsg" description="出错信息" type="out" paramtype="12" />
+			<param name="res" description="结果集" type="out" paramtype="-10"/>
+		</procedure>
+		<procedure localname="SP_SST_ZYYJJ_COUNTMONEY_V2" remotename="SP_SST_ZYYJJ_COUNTMONEY_V2"
+			description="统计终端收钱总额" resulttype="cursor" cursorindex="16" messageindex="15">
+			<param name="zdbh00" description="终端编号" type="in" />
+			<param name="sfcdbz" description="是否重打标志" type="in" />
+			<param name="bcsqsj" description="本次收钱时间" type="out" paramtype="12" />
+			<param name="scsqsj" description="上次收钱时间" type="out" paramtype="12" />
+			<param name="zdbh00" description="终端编号" type="out" paramtype="12" />
+			<param name="zdmc00" description="终端名称" type="out" paramtype="12" />
+			<param name="cgjybs" description="成功交易笔数" type="out" paramtype="12" />
+			<param name="cgjyje" description="成功交易金额" type="out" paramtype="12" />
+			<param name="hzsbbs" description="汇总失败笔数" type="out" paramtype="12" />
+			<param name="hzsbje" description="汇总失败金额" type="out" paramtype="12" />
+			<param name="dbsbbs" description="单笔失败笔数" type="out" paramtype="12" />
+			<param name="dbsbje" description="单笔失败金额" type="out" paramtype="12" />
+			<param name="dbzybs" description="单笔争议笔数" type="out" paramtype="12" />
+			<param name="dbzyje" description="单笔争议金额" type="out" paramtype="12" />
+			<param name="errmsg" description="出错信息" type="out" paramtype="12" />
+			<param name="res" description="结果集" type="out" paramtype="-10"/>
+		</procedure>
+	</procedures>
+</sst-bundle>
